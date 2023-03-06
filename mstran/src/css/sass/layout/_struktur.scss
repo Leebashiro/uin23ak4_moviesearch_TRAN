@@ -1,0 +1,27 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header, main {
+display: block;
+width: 100%;
+text-align: center;
+}
+
+#search-container input[type="text"] {
+height: 48px;
+font-size: 24px;
+padding: 12px;
+}
+
+#search-container button {
+height: 48px;
+font-size: 24px;
+}
