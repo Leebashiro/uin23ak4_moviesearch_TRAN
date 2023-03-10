@@ -20,15 +20,19 @@ header, main {
   text-align: center;
 }
 
-#search-container input[type=text] {
-  height: 48px;
+.search-bar {
   font-size: 24px;
-  padding: 12px;
+  height: 48px;
+  padding: 8px 16px;
+  border: 2px solid #ccc;
+  outline: none;
+  box-shadow: none;
 }
 
-#search-container button {
-  height: 48px;
+.search-button {
   font-size: 24px;
+  height: 48px;
+  padding: 8px 16px;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNhc3MvbWFpbi5zY3NzIiwibWFpbi5jc3MiLCJzYXNzL2xheW91dC9fc3RydWt0dXIuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLHNCQUFBO0VBQ0EseUNBQUE7QUNDSjs7QUNIQTtFQUNJLGFBQUE7RUFDQSxzQkFBQTtFQUNBLHVCQUFBO0VBQ0EsZ0JBQUE7QURNSjs7QUNIQTtFQUNJLG1CQUFBO0FETUo7O0FDSEE7RUFDQSxjQUFBO0VBQ0EsV0FBQTtFQUNBLGtCQUFBO0FETUE7O0FDSEE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLGFBQUE7QURNQTs7QUNIQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FETUEiLCJmaWxlIjoibWFpbi5jc3MifQ== */
+/*# sourceMappingURL=main.css.map */

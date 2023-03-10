@@ -1,6 +1,7 @@
-import SearchBar from "./SearchBar";
+import Search from './Search'
+import SearchResults from './SearchResults'
 
-export default function Layout(){
+export default function Layout(movies, setSearch, getMovies){
     return (
         <div id="container">
           <header>
@@ -8,8 +9,12 @@ export default function Layout(){
           </header>
 
           <main>
-         <SearchBar/>
+          <Search setSearch={setSearch} getMovies={getMovies}/>
           </main>
+          
+          <section>
+          <SearchResults movies={movies} setSearch={setSearch} getMovies={getMovies} />
+          </section>
           
           <footer>
     
