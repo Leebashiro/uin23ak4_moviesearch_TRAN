@@ -1,7 +1,7 @@
 import Search from './Search'
 import SearchResults from './SearchResults'
 
-export default function Layout(movies, setSearch, getMovies){
+export default function Layout({movies, setSearch, getMovies}){
     return (
         <div id="container">
           <header>

@@ -4,19 +4,19 @@ export default function SearchResults({movies}) {
   return (
     <>
       <section className="poster-view">
-        {movies.map((movie, index) => (
+        {movies?.map((movie, index) => (
           <MovieCard
             key={index}
             title={movie.Title}
             year={movie.Year}
-            genre={movie.genre}
-            director={movie.director}
-            actors={movie.actors}
-            awards={movie.awards}
+            genre={movie.Genre}
+            director={movie.Director}
+            actors={movie.Actors}
+            awards={movie.Awards}
             poster={movie.Poster}
           />
-        ))}
-      </section>
+        ))} 
+      </section> 
     </>
   );
 }

@@ -1,7 +1,7 @@
-export default function MovieCard({ title, year, genre, director, actors, awards, poster}) {
+export default function MovieCard({title, year, genre, director, actors, awards, poster}) {
   return (
     <article className="movie-card">
-      <img src={poster} alt={title} />
+      <img src={poster === "N/A" ? 'https://via.placeholder.com/300x200' : poster} alt={title} />
       <h3>{title}</h3>
       <p>Year: {year}</p>
       <p>Genre: {genre}</p>

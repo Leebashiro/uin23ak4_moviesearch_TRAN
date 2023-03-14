@@ -7,7 +7,6 @@ export default function Search({setSearch, getMovies}){
     const handleSearch = (event) =>{
         setSearch(event.target.value)
         console.log(event.target.value)
-
     }
 
     return (
