@@ -10,18 +10,20 @@ function App() {
 
   const getMovies = async () => {
   
-    const response = await fetch(`http://www.omdbapi.com/?s=${search}&apikey=7d1d6ea4&type=movie`)
+    const response = await fetch(`http://www.omdbapi.com/?s=${search}*&apikey=7d1d6ea4&type=movie`)
     const data = await response.json()
-  /*Først og fremst henter vi data fra API via fetch, og setter inn search som parameter slik at vi får brukt search for å
-  søke frem data i API */
+  /*Først og fremst henter vi data fra API via fetch (på search får vi bare data på poster, title og year), og setter inn search 
+  som parameter slik at vi får brukt search for å søke frem data i API. Videre, setter jeg også inn wildcard character (*)
+  etter paramteren slik at hvis jeg f.eks søker på  /
     
-  /*Deretter, lager vi et nytt API-kall som henter fram ekstra informasjon om filmene som ble kalt i det første API-kallet.*/
-    /*Setter inn en betingelse som sjekker om API faktisk gir noe data, slik at hele nettsiden ikke får noen error ved å ikke 
+  /*Jeg skjønte ikke helt hvordan jeg skulle få til å få mer informasjon fra det samme API-kallet, så jeg bestemte meg for å
+  lage enda et API-kall. Denne henter fram ekstra informasjon som ble kalt i det første APi-kallet (f.eks genre, actors, osv)
+  Setter inn en betingelse som sjekker om API faktisk gir noe data, slik at hele nettsiden ikke får noen error ved å ikke 
   fremstille data som ikke eksisterer*/
     if (data.Search && data.Search.length >= 1) {
   /*I og med at vi henter ekstra-data til flere elementer, må
-  vi bruke promise.all for å lage flere asynkroniske API-kall (via mapping) slik at de kan rendre samtidig på UI*/
-  /*Bruker map for å lage flere promises som henter data fra API-kall med imdbID via url, slik at vi får data som f.eks genre,
+  vi bruke promise.all for å lage flere asynkroniske API-kall (via mapping) slik at de kan rendre samtidig på UI
+  Bruker map for å lage flere promises som henter data fra API-kall med imdbID via url, slik at vi får data som f.eks genre,
   director, awards, og lignende*/
       const movieDetails = await Promise.all(
 
