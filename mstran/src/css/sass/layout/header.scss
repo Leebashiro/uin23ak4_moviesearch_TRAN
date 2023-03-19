@@ -1,0 +1,17 @@
+//@font-face {
+  //  font-family: 'italic';
+    //src: url('/mstran/fonts/') format('truetype');
+//} 
+
+header {
+    margin-bottom: 30px;
+    font-family: 'italic', sans-serif;
+    color: white;
+}
+  
+header, main {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+

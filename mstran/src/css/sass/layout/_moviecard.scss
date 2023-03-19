@@ -1,0 +1,17 @@
+.movie-card img {
+    width: 300px;
+    height: 375px;
+}
+
+.movie-card {
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc; 
+    background-color: antiquewhite;
+}
+
+.movie-card {
+    max-width: 300px;
+    overflow-wrap: break-word;
+}
+
